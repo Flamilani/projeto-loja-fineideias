@@ -3,20 +3,26 @@
   "version": "1.0.0",
   "description": "projeto loja com Node",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
+    "tsc" : "tsc",
+    "start": "node dist/server.js",
+    "postinstall": "npm run tsc && copyfiles -u 1 src/**/*.mustache dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "nodemon -e ts,json,mustache src/server.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marischi/Projeto_Node.git"
+    "url": "git+https://github.com/Flamilani/projeto-loja-fineideias.git"
   },
   "author": "Marilene Schiavoni",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/marischi/Projeto_Node/issues"
+    "url": "https://github.com/Flamilani/projeto-loja-fineideias/issues"
   },
-  "homepage": "https://github.com/marischi/Projeto_Node#readme",
+  "homepage": "https://github.com/Flamilani/projeto-loja-fineideias#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
@@ -26,6 +32,7 @@
   "devDependencies": {
     "@types/express": "^4.17.14",
     "@types/mustache-express": "^1.2.2",
-    "@types/node": "^18.11.9"
+    "@types/node": "^18.11.9",
+    "copyfiles": "^2.4.1"
   }
 }
