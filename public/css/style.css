@@ -21,6 +21,17 @@ body {
   margin: auto;
 }
 
+.container img {
+  margin: auto;
+  display: block;
+}
+
+.containe .no-list img {
+  margin: auto;
+  display: block;
+  width: 400px;
+}
+
 header {
   font-size: 28px;
   padding: 10px 0;

@@ -25,12 +25,12 @@
         <a href="/">
         <img src="img/logo_fine.png" alt="Logo" class="logo" />
         </a>
-        <form class="formGroup">
+        <form class="formGroup" method="GET" action="/search">
           <input
             type="search"
             name="busca"
             placeholder="Pesquise por categoria"
-            value=""
+            value="{{ query }}"
           />
         </form>
       </div>
